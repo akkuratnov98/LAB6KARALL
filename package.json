@@ -1,0 +1,9 @@
+{
+"name": "LAB6KARALL",
+"version": "1.0.0",
+"dependencies": {
+"body-parser": "latest",
+"express": "^4.17.1",
+"image-js": "^0.21.9"
+}
+}

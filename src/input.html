@@ -1,0 +1,40 @@
+<html xmlns="http://www.w3.org/1999/html">
+    <head>  
+        <meta http-equiv="Content-Type" content="text/html;   
+        charset=UTF-8" />  
+    </head>  
+    <body onload="onload()">  
+        <form action="/upload" method="post" onsubmit="return inputCheck(event)">  
+            <br>
+            Введите название животного
+            <br><input type="text" id="textId" name="name" type="text" placeholder=" " size="40"/>
+            <br>Ширина<input type="number" name="weight" size="5"/>Высота<input type="number" name="height" size="5"/>
+            <br>Цвет<input type="text" name="colour"/>
+            <br><p><input type="submit" value="Отправить" type="color" value="#55cc77">
+
+        </form>  
+    </body>  
+    <script>
+        var textValue;
+        function onload()
+        {
+            textValue = document.getElementById('textId');
+        }
+        function inputCheck(e)
+        {
+            var teV = textValue.value;
+            var teC = teV.match(/\b(camel|bullock|wolf)\b\s?\d?/i);
+            var res;
+            if (!teC)
+            {
+                e.preventDefault();
+                alert("NO!");
+                res = false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+    </script>
+</html> 
